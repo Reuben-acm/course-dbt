@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_postgres_products
+    description: base products table from postgres representing products in greeneery
+  - name: stg_postgres_addresses
+    description: base addresses table from postgres representing addresses in greeneery
+  - name: stg_postgres_events
+    description: base events table from postgres representing events in greeneery
+  - name: stg_postgres_order_items
+    description: base items table from postgres representing items in greeneery
+  - name: stg_postgres_orders
+    description: base orders table from postgres representing orders in greeneery
+  - name: stg_postgres_promos
+    description: base promos table from postgres representing promos in greeneery
+  - name: stg_postgres_users
+    description: base users table from postgres representing users in greeneery
