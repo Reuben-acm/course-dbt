@@ -5,12 +5,28 @@ models:
     description: base products table from postgres representing products in greeneery
   - name: stg_postgres_addresses
     description: base addresses table from postgres representing addresses in greeneery
+    columns:
+    - name: zipcode
+      tests:
+        - not_null
   - name: stg_postgres_events
     description: base events table from postgres representing events in greeneery
+    columns:
+    - name: event_id
+      tests:
+        - not_null
+        - unique
   - name: stg_postgres_order_items
     description: base items table from postgres representing items in greeneery
   - name: stg_postgres_orders
     description: base orders table from postgres representing orders in greeneery
+    columns:
+    - name: order_total
+      description: ""
+      tests:
+        - dbt_utils.accepted_range:
+            min_value: 0
+            max_value: 100
   - name: stg_postgres_promos
     description: base promos table from postgres representing promos in greeneery
   - name: stg_postgres_users

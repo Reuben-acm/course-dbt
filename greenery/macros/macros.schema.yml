@@ -1,0 +1,10 @@
+version: 2
+
+macros:
+  - name: sum)f
+    description: Aggregation that sums a coulmn with a specific value
+    arguments:
+      - name: col_name
+        description: Target col name
+      - name: col_value
+        description: Target col value
